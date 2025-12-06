@@ -11,7 +11,8 @@
     <h1>Calculadora</h1>
     <div class="calculator-wrapper">
       <div class="calculator-container">
-        <input type="text" id="display" disabled>
+        <label for="display" class="sr-only">Display da Calculadora</label>
+<input type="text" id="display" disabled placeholder="0" />
         <div class="buttons">
           <button onclick="clearDisplay()">C</button>
           <button onclick="appendValue('7')">7</button>
@@ -46,3 +47,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
