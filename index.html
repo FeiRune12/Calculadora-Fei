@@ -9,42 +9,73 @@
 <body>
   <section class="calculator">
     <h1>Calculadora</h1>
-    <div class="calculator-wrapper">
-      <div class="calculator-container">
-        <label for="display" class="sr-only">Display da Calculadora</label>
-<input type="text" id="display" disabled placeholder="0" />
-        <div class="buttons">
-          <button onclick="clearDisplay()">C</button>
-          <button onclick="appendValue('7')">7</button>
-          <button onclick="appendValue('8')">8</button>
-          <button onclick="appendValue('9')">9</button>
-          <button onclick="appendValue('/')">/</button>
+<div class="calculator-wrapper">
 
-          <button onclick="appendValue('4')">4</button>
-          <button onclick="appendValue('5')">5</button>
-          <button onclick="appendValue('6')">6</button>
-          <button onclick="appendValue('*')">*</button>
+  <!-- CALCULADORA -->
+  <div class="calculator-container">
 
-          <button onclick="appendValue('1')">1</button>
-          <button onclick="appendValue('2')">2</button>
-          <button onclick="appendValue('3')">3</button>
-          <button onclick="appendValue('-')">-</button>
+    <!-- DISPLAY -->
+    <input type="text" id="display" disabled>
 
-          <button onclick="appendValue('0')">0</button>
-          <button onclick="appendValue('.')">.</button>
-          <button onclick="calculate()">=</button>
-          <button onclick="appendValue('+')">+</button>
-        </div>
-      </div>
+    <!-- BOTÃO PARA MOSTRAR FUNÇÕES AVANÇADAS -->
+    <button id="toggle-adv" class="adv-btn">2nd</button>
 
-      <div class="history">
-        <h2>Histórico</h2>
-        <ul id="history-list"></ul>
-      </div>
+    <!-- PAINEL AVANÇADO -->
+    <div class="advanced-panel hidden">
+      <button onclick="append('sin(')">sin</button>
+      <button onclick="append('cos(')">cos</button>
+      <button onclick="append('tan(')">tan</button>
+      <button onclick="append('log(')">log</button>
+      <button onclick="append('ln(')">ln</button>
+
+      <button onclick="append('(')">(</button>
+      <button onclick="append(')')">)</button>
+      <button onclick="append('Math.sqrt(')">√</button>
+      <button onclick="append('!')">x!</button>
+
+      <button onclick="append('1/(')">1/x</button>
+      <button onclick="append('Math.PI')">π</button>
+      <button onclick="append('**')">xʸ</button>
     </div>
-  </section>
+
+    <!-- BOTÕES NORMAIS -->
+    <div class="buttons">
+      <button onclick="clearDisplay()">C</button>
+      <button onclick="delLast()">DEL</button>
+      <button onclick="append('%')">%</button>
+
+      <button onclick="append('7')">7</button>
+      <button onclick="append('8')">8</button>
+      <button onclick="append('9')">9</button>
+      <button onclick="append('*')">*</button>
+
+      <button onclick="append('4')">4</button>
+      <button onclick="append('5')">5</button>
+      <button onclick="append('6')">6</button>
+      <button onclick="append('-')">-</button>
+
+      <button onclick="append('1')">1</button>
+      <button onclick="append('2')">2</button>
+      <button onclick="append('3')">3</button>
+      <button onclick="append('+')">+</button>
+
+      <button class="empty"></button>
+      <button onclick="append('0')">0</button>
+      <button onclick="append('.')">,</button>
+      <button onclick="calculate()">=</button>
+    </div>
+
+  </div>
+
+  <!-- HISTÓRICO -->
+  <div class="history">
+    <h3>Histórico</h3>
+    <ul id="history-list"></ul>
+  </div>
+
+</div>
+
 
   <script src="script.js"></script>
 </body>
 </html>
-
