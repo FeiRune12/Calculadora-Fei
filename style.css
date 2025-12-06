@@ -66,7 +66,8 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #1c1c1e; /* Fundo escuro */
+  background: url('bg-desktop.png') no-repeat center center fixed;
+  background-size: cover;
   color: #fff;
   margin: 0;
   padding: 20px;
